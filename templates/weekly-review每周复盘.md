@@ -25,15 +25,10 @@
 1. Problem / 问题:
    Conclusion / 结论:
 
-2. Problem / 问题:
-   Conclusion / 结论:
-
 ---
 
-## 4) Next Week's Experiments / 下周实验计划 [Required]
+## 4) Next Week's Plan / 下周计划 [Required]
 <!-- ZH: 下周要尝试的新事物/实验 | EN: New things/experiments to try next week -->
-- [ ] Experiment / 实验 1 (Hypothesis / 假设 / Action / 动作 / Metrics / 指标)
-- [ ] Experiment / 实验 2 (Hypothesis / 假设 / Action / 动作 / Metrics / 指标)
 
 ---
 
