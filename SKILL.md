@@ -212,11 +212,11 @@ C: 自动检测 (Auto-detect)
 
 **Step 2: 植入 Skill 文件到笔记库** ⭐
 
-将官方 Skill 文件复制到 `<vault>/.ai-notes/`：
+将官方 Skill 文件复制到 `<vault>/obsidian-ai-notes skill配置/`：
 
 ```
 <vault>/
-└── .ai-notes/
+└── obsidian-ai-notes skill配置/
     ├── SKILL.md              # 执行规范（用户可修改）
     ├── README.md             # 使用文档
     ├── templates/            # 模板文件
@@ -226,13 +226,44 @@ C: 自动检测 (Auto-detect)
 **告知用户**：
 ```
 📦 Skill 文件已植入笔记库！
-
-位置：<vault>/.ai-notes/
+位置：<vault>/obsidian-ai-notes skill配置/
 
 好处：
-• 你可以像改笔记一样修改 SKILL.md
-• 用自然语言告诉 AI "帮我修改模板"，即时生效
-• 你的修改完全属于你自己，不会被官方更新覆盖
+• 直接暴露在 Obsidian 侧边栏，随时可见可改
+• 你可以像改笔记一样修改 SKILL.md，AI执行时优先遵循你的笔记skill，而非官方
+• 用自然语言告诉 AI "帮我修改模板"或直接修改templates，即时生效
+
+```
+
+**Step 3: 展示完整骨架结构**
+
+```
+📦 你的笔记库骨架已搭建完成！
+
+<vault>/
+├── 📅每日笔记/                    # -day 指令落点
+│   └── YYYY-MM-DD-每日笔记.md
+├── 📚主题笔记/                    # -note, -input 指令落点
+│   ├── 主题分类/
+│   └── 创作灵感/
+├── 📆每周笔记/                    # -week 指令落点
+│   └── YYYY-MM-DD-每周复盘.md
+├── 📋待跟踪任务/                  # -task 指令落点
+│   └── 任务名.md
+├── 📝创作输出/                    # -output 指令落点
+├── 🛠️tools/                      # -tool 指令落点
+│   └── 工具名/
+├── 💡笔记工作流优化idea/           # -update 指令落点
+└── obsidian-ai-notes skill配置/   # Skill 文件（可修改）
+    ├── SKILL.md
+    ├── README.md
+    └── templates/
+
+好处：
+✅ 所有内容都有固定归宿，不再散落各处
+✅ 用指令快速创建，无需手动找位置
+✅ 侧边栏结构清晰，一眼找到所需
+✅ AI 理解你的组织方式，协作更顺畅
 ```
 
 ### Phase 4: 用户级记忆配置 + 首条指令演示
@@ -263,7 +294,7 @@ B: 跳过，仅当前工作空间可用
 - **执行优先级**: 优先使用笔记库内 .ai-notes/SKILL.md，其次官方 Skill
 ```
 
-**Step 3: 告知用户好处**
+**Step 3: 告知用户好处+: 首条指令演示**
 
 ```
 ✅ 全局记忆已配置！
@@ -275,16 +306,60 @@ B: 跳过，仅当前工作空间可用
 • 无需每次手动加载 Skill
 • 修改 <vault>/.ai-notes/SKILL.md 即时生效
 
-试试输入：-day
+试试输入：-note obsidian-ai-notes功能介绍以及应用场景
 ```
 
-**Step 4: 首条指令演示**
-
-用 `-day` 演示，根据语言输出对应语言内容。
-用 `-day` 演示，根据语言输出对应语言内容。
-
 ### Phase 5: 扩展 Skill 推荐
-展示推荐安装的扩展 Skill（见第 7 节）。
+
+**AI 与用户对话**：
+
+```
+🚀 基础笔记工作流已就绪！
+
+想让你的笔记系统更强大吗？推荐安装以下扩展 Skill：
+
+┌─────────────────────────┬──────────┬────────────────────────────────────┐
+│ Skill                   │ 级别     │ 用途                               │
+├─────────────────────────┼──────────┼────────────────────────────────────┤
+│ obsidian-ai-notes       │ 必需     │ 核心笔记工作流（当前已安装）        │
+│ obsidian                │ 必需     │ Obsidian 自动化操作                │
+│ xiaohongshu             │ 推荐     │ 小红书内容采集与整理               │
+│ youtube-full            │ 推荐     │ YouTube 完整工作流（下载/转录/总结）│
+│ video-summary           │ 推荐     │ 多平台视频总结（B站/抖音等）        │
+│ find-skills             │ 推荐     │ 发现更多实用 Skill                 │
+│ self-improving-agent    │ 推荐     │ 自动记录错误并持续改进             │
+└─────────────────────────┴──────────┴────────────────────────────────────┘
+
+💡 特别推荐：xiaohongshu Skill
+安装后，你可以直接说：
+• "帮我采集小红书上关于 AI 工具的笔记"
+• "把这篇小红书内容整理到我的主题笔记"
+• "搜索小红书上的副业灵感并归档"
+
+AI 会自动读取小红书内容，并按你的笔记结构归档。
+
+📍 是否现在安装扩展 Skills？
+
+A: 安装推荐 Skills（xiaohongshu + youtube-full + video-summary）
+B: 查看每个 Skill 的详细说明
+C: 跳过，以后再说
+```
+
+**如果用户选择 A**：
+执行安装命令，并告知安装进度和完成后的使用方法。
+
+**如果用户选择 B**：
+逐个展示 Skill 的详细说明、安装命令、使用示例。
+
+**如果用户选择 C**：
+```
+好的，已跳过扩展 Skill 安装。
+
+随时可以通过以下方式安装：
+• 说 "帮我安装小红书 Skill"
+• 或运行：find-skills xiaohongshu
+```
+
 
 ---
 
@@ -300,7 +375,7 @@ B: 跳过，仅当前工作空间可用
 ├── 📝创作输出/                 # -output
 ├── 🛠️tools/                  # -tool
 ├── 💡笔记工作流优化idea/        # -update
-└── .ai-notes/                 # Skill 配置
+└── obsidian-ai-notes skill配置/  # Skill 配置（可修改）
     ├── SKILL.md
     ├── templates/
     └── README.md
@@ -316,7 +391,7 @@ B: 跳过，仅当前工作空间可用
 ├── 📝Output/                   # -output
 ├── 🛠️Tools/                   # -tool
 ├── 💡Ideas/                    # -update
-└── .ai-notes/
+└── obsidian-ai-notes skill配置/
 ```
 
 ---
@@ -328,7 +403,7 @@ B: 跳过，仅当前工作空间可用
 AI 按以下顺序查找模板：
 
 ```
-1. .ai-notes/user/templates/（用户自定义）
+1. obsidian-ai-notes skill配置/templates/（用户自定义）
    └─ 存在 → 使用用户模板（不会被更新覆盖）
    
 2. templates/（官方模板）
@@ -378,20 +453,6 @@ cp templates/daily-note每日笔记.md .ai-notes/user/templates/
 
 ---
 
-## 7. Phase 5: 扩展 Skill 推荐
-
-完成开箱后，根据用户需求推荐安装：
-
-| Skill | 中文效果 | EN Effect | 建议级别 |
-|-------|---------|-----------|---------|
-| 小红书 / Xiaohongshu | 搜索/读取小红书笔记 → 一键入库 | Search/read Xiaohongshu notes → one-click import | 推荐 |
-| X (Twitter) / X采集 | 搜索推文/线程 → 归档到主题笔记 | Search tweets/threads → archive to topics | 推荐 |
-| YouTube Full | 视频字幕摘要 → 自动归档 | Video transcripts → auto-archive | 推荐 |
-| Agent Reach | 多平台聚合搜索 | Multi-platform aggregation | 推荐 |
-| Find Skills | 发现更多能力 | Discover more capabilities | 可选 |
-
----
-
 ## 8. 自动化（延迟触发）
 
 - 完成第一篇 `-day` 后：询问是否开启每日自动化
@@ -404,7 +465,7 @@ cp templates/daily-note每日笔记.md .ai-notes/user/templates/
 ## 9. 自定义
 
 用户可随时：
-- 编辑 `.ai-notes/templates/` 修改模板
+- 编辑 `obsidian-ai-notes skill配置/templates/` 修改模板
 - 告诉 AI 新文件夹名进行迁移
 - 在根目录新建文件夹添加分类
 

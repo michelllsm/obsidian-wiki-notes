@@ -14,15 +14,15 @@
 
 ## 2) Standard Skill Installation Table / Skill 标准安装表
 
-| Skill | Level / 建议级别 | Purpose / 主要用途 | Source / 原地址 |
-|-------|-----------------|-------------------|----------------|
-| obsidian-ai-notes | Required / 必安装 | Core note workflow / 笔记工作流核心 | Current Skill package / 当前 Skill 包 |
-| obsidian | Required / 必安装 | Note automation / 笔记读写自动化 | https://help.obsidian.md |
-| find-skills | Recommended / 推荐安装 | Discover new Skills / 发现新 Skill | https://skills.sh/ |
-| self-improving-agent | Recommended / 推荐安装 | Record errors & improve / 记录错误并沉淀改进 | User-level skill / 本地技能包 |
-| youtube-full | Recommended / 推荐安装 | YouTube full workflow / YouTube 全链路能力 | https://transcriptapi.com |
-| video-summary | Recommended / 推荐安装 | Multi-platform video summary / 多平台视频摘要 | https://github.com/yt-dlp/yt-dlp |
-| xiaohongshu | Optional / 可选安装 | Xiaohongshu content workflow / 小红书内容链路 | https://github.com/xpzouying/xiaohongshu-mcp |
+| Skill                | Level / 建议级别       | Purpose / 主要用途                         | Source / 原地址                                 |
+| -------------------- | ------------------ | -------------------------------------- | -------------------------------------------- |
+| obsidian-ai-notes    | Required / 必安装     | Core note workflow / 笔记工作流核心           | Current Skill package / 当前 Skill 包           |
+| obsidian             | Required / 必安装     | Note automation / 笔记读写自动化              | https://help.obsidian.md                     |
+| find-skills          | Recommended / 推荐安装 | Discover new Skills / 发现新 Skill        | https://skills.sh/                           |
+| self-improving-agent | Recommended / 推荐安装 | Record errors & improve / 记录错误并沉淀改进    | User-level skill / 本地技能包                     |
+| youtube-full         | Recommended / 推荐安装 | YouTube full workflow / YouTube 全链路能力  | https://transcriptapi.com                    |
+| video-summary        | Recommended / 推荐安装 | Multi-platform video summary / 多平台视频摘要 | https://github.com/yt-dlp/yt-dlp             |
+| xiaohongshu          | Recommended / 推荐安装 | Xiaohongshu content workflow / 小红书内容链路 | https://github.com/xpzouying/xiaohongshu-mcp |
 
 ---
 
