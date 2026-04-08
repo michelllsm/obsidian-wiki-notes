@@ -21,7 +21,7 @@ git clone https://github.com/michelllsm/obsidian-ai-notes.git
 # A: 中文  B: English  C: Auto-detect
 
 # 4. Start taking notes
--day Today I learned about Obsidian AI Notes
+-note Introduce the specific application scenarios of the obsidian-ai-notes skill.
 ```
 
 ---
