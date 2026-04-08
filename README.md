@@ -26,6 +26,38 @@ git clone https://github.com/michelllsm/obsidian-ai-notes.git
 
 ---
 
+## 🔄 Updates & Customization
+
+### How to Update
+
+```bash
+# Pull latest updates (your customizations are safe)
+git pull origin main
+```
+
+**Your customizations are protected:**
+- Files in `.ai-notes/user/` won't be overwritten
+- Custom templates in `user-templates/` are preserved
+- Personal rules in `custom-prompts/` remain intact
+
+### How to Customize
+
+```bash
+# 1. Copy official template to user directory
+cp templates/daily-note每日笔记.md .ai-notes/user/templates/
+
+# 2. Edit the user version
+# Modify .ai-notes/user/templates/daily-note每日笔记.md
+
+# 3. AI will use your custom template automatically
+```
+
+**Template Priority:**
+1. `.ai-notes/user/templates/` (your custom) ← **Priority**
+2. `templates/` (official)
+
+---
+
 ## ✨ Core Commands
 
 | Command | Aliases | Purpose | Output Folder |

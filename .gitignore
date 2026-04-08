@@ -15,3 +15,9 @@ node_modules/
 # Temp
 tmp/
 temp/
+
+# User customizations (protected from upstream updates)
+.ai-notes/user/
+user-templates/
+custom-prompts/
+personal-rules.md
