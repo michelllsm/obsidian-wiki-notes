@@ -1,3 +1,11 @@
+---
+created: {{date:YYYY-MM-DDTHH:mm}}+08:00
+modified: {{date:YYYY-MM-DDTHH:mm}}+08:00
+type: weekly
+week: "{{week}}"
+tags: [每周复盘, {{year}}]
+---
+
 # {{week}}
 
 > Command: `-week` | 指令：`-每周笔记`
@@ -6,54 +14,55 @@
 
 ---
 
-## 1) Key Outputs / 本周关键输出 [Required]
+## 1) 本周关键输出 [Required]
 <!-- ZH: 本周完成的重要产出 | EN: Important outputs completed this week -->
-- Output / 产出 1:
-- Output / 产出 2:
+- 产出 1:
+- 产出 2:
 
 ---
 
-## 2) High-Value Inputs / 高价值输入 [Required]
+## 2) 高价值输入 [Required]
 <!-- ZH: 本周学到的重要知识/信息来源 | EN: Valuable knowledge/information sources this week -->
-- Source / 来源 1:
-- Source / 来源 2:
+- 来源 1:
+- 来源 2:
 
 ---
 
-## 3) Problems & Conclusions / 问题与结论 [Required]
+## 3) 问题与结论 [Required]
 <!-- ZH: 本周遇到的问题及解决方案 | EN: Problems encountered this week and solutions -->
-1. Problem / 问题:
-   Conclusion / 结论:
+1. 问题:
+   结论:
 
 ---
 
-## 4) Next Week's Plan / 下周计划 [Required]
+## 4) 下周计划 [Required]
 <!-- ZH: 下周要尝试的新事物/实验 | EN: New things/experiments to try next week -->
 
 ---
 
-## 5) Methods & Tools / 方法与工具 [Optional]
+## 5) 方法与工具 [Optional]
 <!-- ZH: 新方法、新工具或失败尝试 | EN: New methods, tools, or failed attempts -->
-- New Method / 新方法:
-- New Tool / 新工具:
-- Failed Attempt / 失败尝试:
+- 新方法:
+- 新工具:
+- 失败尝试:
 
 ---
 
-## 6) Content Review / 内容回顾 [Optional]
+## 6) 内容回顾 [Optional]
 <!-- ZH: 创作内容的数据回顾 | EN: Content creation data review -->
-- Published / 发布数量:
-- High Performers / 高表现:
-- Low Performers / 低表现原因:
+- 发布数量:
+- 高表现:
+- 低表现原因:
 
 ---
 
-## 7) Reusable Assets / 可复用资产 [Optional]
+## 7) 可复用资产 [Optional]
 <!-- ZH: 本周创建的Prompt或SOP | EN: Prompts or SOPs created this week -->
 - Prompt:
 - SOP:
 
 ---
 
-<!-- ZH: 标签 | EN: Tags -->
-#Weekly #{{year}} / #每周复盘 #{{year}}
+## 8) 关联笔记 [Optional]
+<!-- ZH: AI 创建时自动扫描主题笔记目录填入 | EN: AI auto-scans topic notes directory when creating -->
+- [[ ]]

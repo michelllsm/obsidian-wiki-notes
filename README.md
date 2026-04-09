@@ -17,12 +17,61 @@ git clone https://github.com/michelllsm/obsidian-ai-notes.git
 # 2. Tell your AI assistant
 -setup
 
-# 3. Select language
-# A: 中文  B: English  C: Auto-detect
-
-# 4. Start taking notes
--note Introduce the specific application scenarios of the obsidian-ai-notes skill.
+# 3. Follow the guided setup (5 phases, ~5 min)
+# 4. Start taking notes!
+-day
 ```
+
+---
+
+## ✨ Core Commands
+
+| Command | Aliases | When to use | Output Folder |
+|---------|---------|-------------|---------------|
+| `-day` | `-daily` | Record today's learnings, problems, and tomorrow's plan | `📅Daily/` |
+| `-note` | `-topic` | Save articles, videos, podcasts — any external content worth keeping | `📚Topics/` |
+| `-week` | `-weekly` | End-of-week review: what shipped, what learned, what's next | `📆Weekly/` |
+| `-task` | `-todo` | Track a task with status, context, and next action | `📋Tasks/` |
+| `-tool` | — | Document a new tool or technique you discovered | `🛠️Tools/` |
+| `-output` | `-out`, `-create` | Your original content: articles, posts, creative work | `📝Output/` |
+| `-input` | `-inspiration` | Quick-capture a fleeting idea or inspiration | `📚Topics/` |
+| `-update` | `-iterate` | Ideas for improving your note workflow itself | `💡Ideas/` |
+| `-compile` | `-synthesize` | Merge multiple notes on a topic into one structured overview | `📚Topics/synthesis/` |
+| `-check` | `-health` | Scan your vault for orphan notes, missing links, stale content | _(report only)_ |
+| `-classify` | `-sort` | AI scans your inbox and files each item to the right folder | from `📎Clippings/` |
+
+> **Tip:** Use `-` prefix to strengthen command recognition. Forgot the `-`? AI will understand clear intent or ask for confirmation.
+
+---
+
+## 📁 Folder Structure
+
+```
+<vault>/
+├── 📅Daily/              # -day
+├── 📚Topics/             # -note, -input (collected content)
+│   └── synthesis/        # -compile (AI-compiled overviews)
+├── 📆Weekly/             # -week
+├── 📋Tasks/              # -task
+├── 📝Output/             # -output (your original work — never mixed with collected)
+├── 🛠️Tools/             # -tool
+├── 💡Ideas/              # -update
+├── 📎Clippings/          # Inbox + raw archive (Web Clipper dumps here, -classify processes)
+└── obsidian-ai-notes skill配置/  # Skill configuration (editable)
+```
+
+**Key design principle:** Collected content (`📚Topics/`) and original output (`📝Output/`) are always separate. You always know what's yours.
+
+---
+
+## 🌍 Language Support
+
+The Skill automatically detects your language preference:
+
+| Language | Folder Example | Output |
+|----------|---------------|--------|
+| 🇨🇳 中文 | `📅每日笔记/`, `📚主题笔记/` | 纯中文 |
+| 🇺🇸 English | `📅Daily/`, `📚Topics/` | Pure English |
 
 ---
 
@@ -31,150 +80,45 @@ git clone https://github.com/michelllsm/obsidian-ai-notes.git
 ### How to Update
 
 ```bash
-# Pull latest updates (your customizations are safe)
 git pull origin main
 ```
 
-**Your customizations are protected:**
-- Files in `.ai-notes/user/` won't be overwritten
-- Custom templates in `user-templates/` are preserved
-- Personal rules in `custom-prompts/` remain intact
+Your customizations are **always protected** — AI merges updates intelligently without overwriting your changes. See SKILL.md § 7 for details.
 
 ### How to Customize
 
-```bash
-# 1. Copy official template to user directory
-cp templates/daily-note每日笔记.md .ai-notes/user/templates/
+Edit any file in `obsidian-ai-notes skill配置/` directly, or tell your AI:
 
-# 2. Edit the user version
-# Modify .ai-notes/user/templates/daily-note每日笔记.md
-
-# 3. AI will use your custom template automatically
+```
+Help me modify the daily note template to add a "mood" field
 ```
 
-**Template Priority:**
-1. `.ai-notes/user/templates/` (your custom) ← **Priority**
-2. `templates/` (official)
+Changes take effect immediately.
 
 ---
 
-## ✨ Core Commands
+## 🧩 Extension Skills
 
-| Command | Aliases | Purpose | Output Folder |
-|---------|---------|---------|---------------|
-| `-day` | `-daily` | Daily log | `📅Daily/` |
-| `-note` | `-topic` | Topic note | `📚Topics/` |
-| `-week` | `-weekly` | Weekly review | `📆Weekly/` |
-| `-task` | `-todo`, `-remind` | Task tracking | `📋Tasks/` |
-| `-tool` | — | Tool card | `🛠️Tools/` |
-| `-output` | `-out`, `-create` | Content creation | `📝Output/` |
-| `-input` | `-inspiration` | Capture inspiration | `📚Topics/` |
-| `-update` | `-iterate` | Workflow improvement | `💡Ideas/` |
+After setup, install these to supercharge your workflow:
 
-> **Tip:** Use `-` prefix to strengthen command recognition. Forgot the `-`? AI will understand clear intent or ask for confirmation.
-
----
-
-## 🌍 Language Support
-
-The Skill automatically detects your language preference and adapts:
-
-| Language | Folder Example | Output |
-|----------|---------------|--------|
-| 🇨🇳 中文 | `📅每日笔记/`, `📚主题笔记/` | 纯中文 |
-| 🇺🇸 English | `📅Daily/`, `📚Topics/` | Pure English |
-
-**Detection Priority:**
-1. Explicit statement
-2. System context
-3. Conversation analysis
-4. Default: Chinese
-
----
-
-## 📁 Folder Structure
-
-```
-<vault>/
-├── 📅Daily/            # -day
-├── 📚Topics/           # -note, -input
-├── 📆Weekly/           # -week
-├── 📋Tasks/            # -task
-├── 📝Output/           # -output
-├── 🛠️Tools/           # -tool
-├── 💡Ideas/            # -update
-└── .ai-notes/          # Skill configuration
-```
+| Skill | What it does | Level |
+|-------|-------------|-------|
+| xiaohongshu | Search & collect Xiaohongshu (RedNote) content → auto-archive | Recommended |
+| youtube-full | YouTube transcripts, search, channels → auto-archive | Recommended |
+| video-summary | Multi-platform video summary (Bilibili, Douyin, YouTube, local) | Recommended |
+| agent-reach | AI internet access: 16+ platforms (Twitter/X, Reddit, Bilibili, etc.) | Recommended |
+| agent-browser | Browser automation: screenshots, form filling, data extraction | Recommended |
+| find-skills | Discover new Skills from the marketplace | Recommended |
+| self-improving-agent | Auto-record errors and improve over time | Recommended |
 
 ---
 
 ## 🔧 Requirements
 
 - [Obsidian](https://obsidian.md/download) (Free)
-- **Recommended:** [Obsidian CLI](https://github.com/YakDao/obsidian-cli)  
-  (`npm install -g obsidian-cli`)
+- **Recommended:** [Obsidian CLI](https://github.com/YakDao/obsidian-cli) (`npm install -g obsidian-cli`)
 
-> No CLI? AI will automatically fall back to filesystem mode. Basic functions still work.
-
----
-
-## 🧩 Extension Skills
-
-After setup, you can install these Skills to extend capabilities:
-
-| Skill | Effect | Recommendation |
-|-------|--------|----------------|
-| Xiaohongshu | Search/read notes → one-click import | Recommended |
-| X (Twitter) | Search tweets/threads → archive to topics | Recommended |
-| YouTube Full | Video transcripts → auto-archive | Recommended |
-| Agent Reach | Multi-platform aggregation | Recommended |
-
----
-
-## 📐 Template Strategy
-
-- Templates have bilingual comments (for field understanding)
-- Actual output keeps only the target language based on your preference
-- All templates are editable, changes take effect immediately
-
----
-
-## ⚙️ Automation
-
-- After first `-day`: Ask if enable daily automation
-- After 3 notes: Ask if enable weekly review automation
-
-Supports: Built-in scheduler / cron / GitHub Actions
-
----
-
-## 📂 Project Structure
-
-```
-obsidian-ai-notes/
-├── README.md              # This file (English)
-├── README_CN.md           # Chinese documentation
-├── SKILL.md               # AI execution spec
-├── LICENSE                # MIT
-├── .gitignore
-├── templates/             # Bilingual annotated templates
-│   ├── daily-note每日笔记.md
-│   ├── weekly-review每周复盘.md
-│   ├── topic-note主题笔记.md
-│   └── task任务.md
-└── docs/                  # Detailed docs
-    ├── skill-installation-table.md / Skill标准安装表.md
-    └── automation-notifications.md / 自动化与通知方案.md
-```
-
----
-
-## 🤝 Contributing
-
-Issues and PRs welcome! Common directions:
-- Template improvements
-- New language support
-- Bug fixes
+> No CLI? AI automatically falls back to filesystem mode.
 
 ---
 
@@ -184,8 +128,6 @@ Issues and PRs welcome! Common directions:
 
 ---
 
-> **Note:** This Skill is designed as general rules. Feel free to modify to fit your workflow. See [SKILL.md](obsidian-ai-notes-github/SKILL.md) for details.
-
----
+> **Note:** This Skill is designed as general rules. Feel free to modify to fit your workflow. See [SKILL.md](SKILL.md) for the full AI execution spec.
 
 **中文版:** [README_CN.md](README_CN.md)
