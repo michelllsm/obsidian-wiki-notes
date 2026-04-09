@@ -5,7 +5,7 @@ type: topic-personal
 title: "{{title}}"
 source: "{{platform}}"
 author: "{{author}}"
-tags: [主题, 个人经验, {{tag}}]
+tags: [主题, 经验沉淀, {{tag}}]
 ---
 
 # {{title}}

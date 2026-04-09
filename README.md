@@ -26,19 +26,31 @@ git clone https://github.com/michelllsm/obsidian-ai-notes.git
 
 ## ✨ Core Commands
 
+### 📥 Capture & Record
+
 | Command | Aliases | When to use | Output Folder |
 |---------|---------|-------------|---------------|
-| `-day` | `-daily` | Record today's learnings, problems, and tomorrow's plan | `📅Daily/` |
-| `-note` | `-topic` | Save articles, videos, podcasts — any external content worth keeping | `📚Topics/` |
-| `-week` | `-weekly` | End-of-week review: what shipped, what learned, what's next | `📆Weekly/` |
+| `-day` | `-daily` | End of day: record learnings, problems, tomorrow's plan. AI auto-reads current conversation + global memory + today's existing notes | `📅Daily/` |
+| `-note` | `-topic` | Save an article, video, podcast — AI extracts summary and key points | `📚Topics/` |
+| `-input` | `-inspiration` | Quick-capture a fleeting idea, no full structure needed | `📚Topics/` |
+| `-week` | `-weekly` | Weekly review. AI auto-reads all daily notes from this week + conversation context | `📆Weekly/` |
+
+### 📤 Output & Track
+
+| Command | Aliases | When to use | Output Folder |
+|---------|---------|-------------|---------------|
+| `-output` | `-out`, `-create` | Your original content: articles, posts, creative work (never mixed with collected) | `📝Output/` |
 | `-task` | `-todo` | Track a task with status, context, and next action | `📋Tasks/` |
 | `-tool` | — | Document a new tool or technique you discovered | `🛠️Tools/` |
-| `-output` | `-out`, `-create` | Your original content: articles, posts, creative work | `📝Output/` |
-| `-input` | `-inspiration` | Quick-capture a fleeting idea or inspiration | `📚Topics/` |
+
+### 🔄 Organize & Maintain
+
+| Command | Aliases | When to use | Output Folder |
+|---------|---------|-------------|---------------|
+| `-ingest` | `-classify`, `-sort` | Inbox is piling up — AI triages each clipping to the right folder | from `📎Clippings/` |
+| `-compile` | `-synthesize` | Multiple notes on one topic — merge into a structured overview | `📚Topics/synthesis/` |
+| `-check` | `-health` | Periodic health scan: orphan notes, stale content, missing links | _(report only)_ |
 | `-update` | `-iterate` | Ideas for improving your note workflow itself | `💡Ideas/` |
-| `-compile` | `-synthesize` | Merge multiple notes on a topic into one structured overview | `📚Topics/synthesis/` |
-| `-check` | `-health` | Scan your vault for orphan notes, missing links, stale content | _(report only)_ |
-| `-classify` | `-sort` | AI scans your inbox and files each item to the right folder | from `📎Clippings/` |
 
 > **Tip:** Use `-` prefix to strengthen command recognition. Forgot the `-`? AI will understand clear intent or ask for confirmation.
 
