@@ -1,6 +1,6 @@
 ---
-created: {{date:YYYY-MM-DDTHH:mm}}+08:00
-modified: {{date:YYYY-MM-DDTHH:mm}}+08:00
+created: {{date:YYYY-MM-DD HH:mm}}
+modified: {{date:YYYY-MM-DD HH:mm}}
 type: topic-personal
 title: "{{title}}"
 source: "{{platform}}"

@@ -1,6 +1,6 @@
 ---
-created: {{date:YYYY-MM-DDTHH:mm}}+08:00
-modified: {{date:YYYY-MM-DDTHH:mm}}+08:00
+created: {{date:YYYY-MM-DD HH:mm}}
+modified: {{date:YYYY-MM-DD HH:mm}}
 type: weekly
 week: "{{week}}"
 tags: [每周复盘, {{year}}]
@@ -10,7 +10,7 @@ tags: [每周复盘, {{year}}]
 
 > Command: `-week` | 指令：`-每周笔记`
 > 
-<!-- ZH: 使用说明：填写【必填】四块完成精简周记 | EN: Usage: Fill [Required] 4 sections for a concise weekly review -->
+<!-- ZH: 使用说明：填写【必填】三块完成精简周记 | EN: Usage: Fill [Required] 3 sections for a concise weekly review -->
 
 ---
 
@@ -35,12 +35,7 @@ tags: [每周复盘, {{year}}]
 
 ---
 
-## 4) 下周计划 [Required]
-<!-- ZH: 下周要尝试的新事物/实验 | EN: New things/experiments to try next week -->
-
----
-
-## 5) 方法与工具 [Optional]
+## 4) 方法与工具 [Optional]
 <!-- ZH: 新方法、新工具或失败尝试 | EN: New methods, tools, or failed attempts -->
 - 新方法:
 - 新工具:
@@ -48,7 +43,7 @@ tags: [每周复盘, {{year}}]
 
 ---
 
-## 6) 内容回顾 [Optional]
+## 5) 内容回顾 [Optional]
 <!-- ZH: 创作内容的数据回顾 | EN: Content creation data review -->
 - 发布数量:
 - 高表现:
@@ -56,13 +51,13 @@ tags: [每周复盘, {{year}}]
 
 ---
 
-## 7) 可复用资产 [Optional]
+## 6) 可复用资产 [Optional]
 <!-- ZH: 本周创建的Prompt或SOP | EN: Prompts or SOPs created this week -->
 - Prompt:
 - SOP:
 
 ---
 
-## 8) 关联笔记 [Optional]
+## 7) 关联笔记 [Optional]
 <!-- ZH: AI 创建时自动扫描主题笔记目录填入 | EN: AI auto-scans topic notes directory when creating -->
 - [[ ]]

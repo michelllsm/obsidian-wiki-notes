@@ -1,6 +1,6 @@
 ---
-created: {{date:YYYY-MM-DDTHH:mm}}+08:00
-modified: {{date:YYYY-MM-DDTHH:mm}}+08:00
+created: {{date:YYYY-MM-DD HH:mm}}
+modified: {{date:YYYY-MM-DD HH:mm}}
 type: daily
 date: "{{date:YYYY-MM-DD}}"
 day: "{{day}}"
@@ -8,10 +8,6 @@ tags: [每日笔记, {{month}}]
 ---
 
 # {{date}}
-
-> Command: `-day` | 指令：`-每日笔记`
-> 
-<!-- ZH: 使用说明：填写【必填】三块即可形成可用日报 | EN: Usage: Fill [Required] sections for a functional daily log -->
 
 ---
 
@@ -33,14 +29,7 @@ tags: [每日笔记, {{month}}]
 
 ---
 
-## 3) 明日动作 [Required]
-<!-- ZH: 明天要做的具体行动 | EN: Specific actions for tomorrow -->
-- [ ] 
-- [ ] 
-
----
-
-## 4) 工具与技巧 [Optional]
+## 3) 工具与技巧 [Optional]
 <!-- ZH: 今天学到的新工具或技巧 | EN: New tools or techniques learned today -->
 - 工具:
 - 技巧:
@@ -48,14 +37,14 @@ tags: [每日笔记, {{month}}]
 
 ---
 
-## 5) 实操记录 [Optional]
+## 4) 实操记录 [Optional]
 <!-- ZH: 代码、命令或关键步骤 | EN: Code, commands, or key steps -->
 ```
 ```
 
 ---
 
-## 6) 统计与复盘 [Optional]
+## 5) 统计与复盘 [Optional]
 <!-- ZH: 今日数据统计和自我评分 | EN: Today's stats and self-rating -->
 - 对话次数:
 - 学习时长:
@@ -64,7 +53,7 @@ tags: [每日笔记, {{month}}]
 
 ---
 
-## 7) 关联笔记 [Optional]
+## 6) 关联笔记 [Optional]
 <!-- ZH: AI 创建时自动扫描主题笔记目录填入 | EN: AI auto-scans topic notes directory when creating -->
 - [[ ]]
 - [[ ]]

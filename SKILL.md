@@ -83,8 +83,8 @@ author: smingliang
 
 ```yaml
 ---
-created: YYYY-MM-DDTHH:mm+08:00
-modified: YYYY-MM-DDTHH:mm+08:00
+created: YYYY-MM-DD HH:mm
+modified: YYYY-MM-DD HH:mm
 type: daily | topic-external | topic-personal | weekly | task | tool | output | compile
 source: 原始链接（如有）
 tags: [标签1, 标签2]
