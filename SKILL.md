@@ -135,13 +135,9 @@ AI 执行笔记创建前必须完成：**模板已读取** · **type 值合法**
 
 ### 2.5 Emoji 路径安全（强制）
 
-文件夹名含 emoji 时，必须遵守 3 条核心规则：
+含 emoji 的路径必须：**双引号包裹** · **前置 `export LC_ALL=en_US.UTF-8`** · **HTML 中 URL 编码不裸写**。
 
-1. **双引号包裹**：所有含 emoji 的路径在 shell/脚本/工具参数中必须用双引号
-2. **UTF-8 前置**：shell 命令前加 `export LC_ALL=en_US.UTF-8`
-3. **HTML 编码**：HTML `href`/`src` 中 emoji 必须 URL 编码（`%F0%9F%93%9A`），不得裸写
-
-> 完整排错流程、NFC/NFD 规范化、搜索工具兼容等代码示例见 [[obsidian-wiki-notes-skill配置/references/command-reference指令参考手册.md]] §10
+> 排错流程、NFC/NFD 规范化、搜索工具兼容等代码示例见 [[obsidian-wiki-notes-skill配置/references/command-reference指令参考手册.md]] §10
 
 ### 2.6 相关资源网络（自动构建）
 
