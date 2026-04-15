@@ -354,7 +354,7 @@ ls ~/.workbuddy/skills/obsidian/SKILL.md 2>/dev/null && echo "✅ 已安装" || 
 
 ### Step 2: 推荐扩展安装
 
-推荐安装列表见 [[Extended Toolkit拓展工具包.md]]，或使用以下默认列表：
+推荐安装列表见 [[obsidian-wiki-notes-skill配置/references/Extended Toolkit拓展工具包.md]]，或使用以下默认列表：
 
 | Skill/插件 | 级别 | 用途 | 首次配置 |
 |------------|------|------|---------|

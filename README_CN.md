@@ -2,9 +2,9 @@
 
 > 通过自然语言指令驱动的 Obsidian AI 笔记工作流
 
-**Obsidian LLM Notes** 是一个 AI Skill，让你通过简单指令（如 `day`、`note`、`exp`）自动创建、归类和管理结构化的 Obsidian 笔记。
+**Obsidian wiki Notes** 是一个 AI Skill，让你通过简单指令（如 `-day`、`-note`、`-exp`）自动创建、归类和管理结构化的 Obsidian 笔记。
 
-**特点：** 中文为主，英文兼容，10 个核心指令覆盖笔记全生命周期。
+**特点：** 10 个核心指令覆盖笔记全生命周期。
 
 ---
 
@@ -59,12 +59,12 @@ day
 
 | 指令        | 模板文件                                                   | 说明                    |
 | --------- | ------------------------------------------------------ | --------------------- |
-| `-note`   | [note-overview.md](templates/note-overview.md)         | 外部内容摘要                |
-| `-exp`    | [note-experience.md](templates/note-experience.md)     | 个人经验沉淀                |
-| `-idea`   | [note-overview.md](templates/note-overview.md)         | 复用 note 模板，启用「输出方向」章节 |
-| `-day`    | [daily-note每日笔记.md](templates/daily-note每日笔记.md)       | 每日记录                  |
-| `-week`   | [weekly-review每周复盘.md](templates/weekly-review每周复盘.md) | 周复盘                   |
-| `-todo`   | [todo任务.md](templates/todo任务.md)                       | 任务跟踪（领域看板格式）          |
+| `-note`   | [note-overview.md](obsidian-wiki-notes-skill配置/templates/note-overview.md)         | 外部内容摘要                |
+| `-exp`    | [note-experience.md](obsidian-wiki-notes-skill配置/templates/note-experience.md)     | 个人经验沉淀                |
+| `-idea`   | [note-overview.md](obsidian-wiki-notes-skill配置/templates/note-overview.md)         | 复用 note 模板，启用「输出方向」章节 |
+| `-day`    | [daily-note每日笔记.md](obsidian-wiki-notes-skill配置/templates/daily-note每日笔记.md)       | 每日记录                  |
+| `-week`   | [weekly-review每周复盘.md](obsidian-wiki-notes-skill配置/templates/weekly-review每周复盘.md) | 周复盘                   |
+| `-todo`   | [todo任务.md](obsidian-wiki-notes-skill配置/templates/todo任务.md)                       | 任务跟踪（领域看板格式）          |
 | `-output` | —                                                      | 自由创作，无固定模板            |
 | `-tool`   | —                                                      | 表格内联定义，无独立模板          |
 
@@ -145,27 +145,16 @@ git pull origin main
 
 开箱完成后，可安装以下 Skill/工具 扩展能力：
 
-| Skill/工具 | 效果 | 建议 | 首次配置 |
-|------------|------|------|---------|
-| **飞书CLI** | 飞书文档/表格/多维表格优先采集 | 推荐 | `npm install -g @larksuiteoapi/cli` + `lark-cli auth login` |
-| **Obsidian Web Clipper** | 网页一键裁剪到Obsidian收件箱 | 推荐 | [浏览器扩展](https://obsidian.md/clipper) |
-| [xiaohongshu](https://github.com/xpzouying/xiaohongshu-mcp) | 搜索/采集小红书内容 → 自动归档到笔记 | 推荐 | 需启动 MCP + 扫码登录 |
-| [find-skills](https://skills.sh/) | 发现更多实用 Skill | 推荐 | 无 |
-| [self-improving-agent](https://skills.sh/) | 自动记录错误并持续改进 | 推荐 | 无 |
+| Skill/工具                                                    | 效果                   | 建议  | 首次配置                                                        |
+| ----------------------------------------------------------- | -------------------- | --- | ----------------------------------------------------------- |
+| **飞书CLI**                                                   | 飞书文档/表格/多维表格优先采集     | 推荐  | `npm install -g @larksuiteoapi/cli` + `lark-cli auth login` |
+| **Obsidian Web Clipper**                                    | 网页一键裁剪到Obsidian收件箱   | 推荐  | [浏览器扩展](https://obsidian.md/clipper)                        |
+| [xiaohongshu](https://github.com/xpzouying/xiaohongshu-mcp) | 搜索/采集小红书内容 → 自动归档到笔记 | 推荐  | 需启动 MCP + 扫码登录                                              |
+| [find-skills](https://skills.sh/)                           | 发现更多实用 Skill         | 推荐  | 无                                                           |
+| [self-improving-agent](https://skills.sh/)                  | 自动记录错误并持续改进          | 推荐  | 无                                                           |
 
 > **为什么推荐列表很短？** YouTube、B站、公众号、X 等平台的信息采集通过内置工具已能获得足够质量的结果，无需额外安装 Skill。仅小红书等需要搜索/互动数据的平台，以及飞书集成场景才需要专属工具。详见 `references/Extended Toolkit拓展工具包.md`。
 
-### 快速安装
-
-```bash
-# 飞书CLI（推荐，用于飞书内容采集）
-npm install -g @larksuiteoapi/cli
-lark-cli auth login
-
-# Obsidian Web Clipper（浏览器扩展）
-# Chrome/Edge: https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjdfpjhn
-# Firefox: https://addons.mozilla.org/firefox/addon/obsidian-web-clipper/
-```
 
 ---
 
@@ -192,6 +181,6 @@ lark-cli auth login
 
 ---
 
-> **说明：** 本 Skill 设计为通用规则，可自由修改以适应你的工作流。详见 [SKILL.md](obsidian-wiki-notes%20skill配置/SKILL.md) 和 [references/command-reference.md](command-reference指令参考手册.md)。
+> **说明：** 本 Skill 设计为通用规则，可自由修改以适应你的工作流。详见 [SKILL.md](obsidian-wiki-notes-skill配置/SKILL.md) 和 [references/command-reference.md](obsidian-wiki-notes-skill配置/references/command-reference指令参考手册.md)。
 
-**English version:** [README.md](obsidian-wiki-notes%20skill配置/README.md)
+**English version:** [README.md](obsidian-wiki-notes-skill配置/README.md)

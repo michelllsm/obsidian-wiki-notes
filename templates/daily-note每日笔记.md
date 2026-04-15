@@ -12,7 +12,7 @@ tags: [每日笔记, {{month}}]
 ---
 
 ## 1) 今日关键收获 [Required]
-<!-- ZH: 今天学到的最重要的几点 | EN: Most important things learned today -->
+<!-- ZH: 今天对话探索的核心主题 | EN: Core topics explored today -->
 - 
 - 
 - 

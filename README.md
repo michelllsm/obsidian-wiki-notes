@@ -59,12 +59,12 @@ Each command **reads its template before generating content**, ensuring consiste
 
 | Command | Template | Description |
 |---------|----------|-------------|
-| `-note` | [note-overview.md](templates/note-overview.md) | External content summary |
-| `-exp` | [note-experience.md](templates/note-experience.md) | Personal experience review |
-| `-idea` | [note-overview.md](templates/note-overview.md) | Reuses note template with "output direction" section enabled |
-| `-day` | [daily-note每日笔记.md](templates/daily-note每日笔记.md) | Daily log |
-| `-week` | [weekly-review每周复盘.md](templates/weekly-review每周复盘.md) | Weekly review |
-| `-todo` | [todo任务.md](templates/todo任务.md) | Task tracking (domain kanban format) |
+| `-note` | [note-overview.md](obsidian-wiki-notes-skill配置/templates/note-overview.md) | External content summary |
+| `-exp` | [note-experience.md](obsidian-wiki-notes-skill配置/templates/note-experience.md) | Personal experience review |
+| `-idea` | [note-overview.md](obsidian-wiki-notes-skill配置/templates/note-overview.md) | Reuses note template with "output direction" section enabled |
+| `-day` | [daily-note每日笔记.md](obsidian-wiki-notes-skill配置/templates/daily-note每日笔记.md) | Daily log |
+| `-week` | [weekly-review每周复盘.md](obsidian-wiki-notes-skill配置/templates/weekly-review每周复盘.md) | Weekly review |
+| `-todo` | [todo任务.md](obsidian-wiki-notes-skill配置/templates/todo任务.md) | Task tracking (domain kanban format) |
 | `-output` | — | Free-form creation, no fixed template |
 | `-tool` | — | Inline table format, no separate template |
 
@@ -190,6 +190,6 @@ This Skill is designed to work with any AI assistant that supports Skills/system
 
 ---
 
-> **Note:** This Skill is designed as general rules. Feel free to modify to fit your workflow. See [SKILL.md](obsidian-wiki-notes%20skill配置/SKILL.md) for the AI execution spec, and [references/command-reference.md](command-reference指令参考手册.md) for detailed command reference.
+> **Note:** This Skill is designed as general rules. Feel free to modify to fit your workflow. See [SKILL.md](obsidian-wiki-notes-skill配置/SKILL.md) for the AI execution spec, and [references/command-reference.md](obsidian-wiki-notes-skill配置/references/command-reference指令参考手册.md) for detailed command reference.
 
-**中文版:** [README_CN.md](README_CN.md)
+**中文版:** [README_CN.md](obsidian-wiki-notes-skill配置/README_CN.md)
