@@ -77,32 +77,37 @@ B: 未安装，请帮我下载
 
 ---
 
-## Phase 2: 工作空间设置（Vault 接入）
+## Phase 2: 工作空间校验（Vault 接入）
 
-### 2.1 二选一（必问）
-- A：**创建全新知识库（推荐）**
-- B：**接入我已有的 Obsidian 知识库**
+> 💡 基于最新的 4 步开箱指南，当用户输入 `-setup` 时，AI 应当已经在正确的 Vault 文件夹内。
 
-### 2.2 新建知识库（A 路径）
-1. 外显推荐路径：`${HOME}/Documents/ObsidianVaults/ai-notes`
-2. 选项：
-   - A：使用推荐路径
-   - B：自定义路径（先给模板 `${HOME}/Documents/ObsidianVaults/<vault-name>` 让用户改名确认）
-3. 确认后进入 Phase 3。
+### 2.1 校验当前环境
+1. 检查当前工作空间绝对路径。
+2. 检测是否存在 `.obsidian/` 目录（判断是否已用 Obsidian 激活过）。
 
-### 2.3 接入已有知识库（B 路径）
-1. 要求用户提供本地 Vault 路径（给出 macOS / Windows 示例）。
-2. 提供加速选项：
-   - A：**完整模式**：读取 → 结构对比 → 建议 → 确认 → 改 Skill → 试跑
-   - B：**快速模式（跳过对比）**：直接使用默认 Skill 规则，后续有冲突再调整
-3. 完整模式需输出：
-   - "Skill 结构 vs 你的结构"对比表（目录/分类/标签/命名/模板字段）
-   - ⚠️ 对比表第一列标题必须写 **"obsidian-wiki-notes 设计"**，不可写成 "obsidian-wiki-notes"
-   - ⚠️ 设计列的目录清单**必须严格来自 SKILL.md §3 的骨架定义**，禁止自行编造目录名
-   - ⚠️ 设计骨架中 **Clippings/ 不带 emoji 前缀**，**没有** `💡笔记工作流优化idea/` 等旧目录
-   - "建议改动清单"
-   - 明确询问"是否有异议"后才执行修改
-4. 完成后进入 Phase 3。
+### 2.2 判定与交互
+
+**情况 A：已在正确的 Vault 中（检测到 `.obsidian/` 或用户明确在库内）**
+直接静默通过，进入 Phase 3。
+
+**情况 B：当前环境无 `.obsidian/` 配置**
+向用户确认是否遗漏了前置步骤：
+
+```text
+⚠️ 检测到当前工作空间似乎不是一个已激活的 Obsidian 知识库（未找到 .obsidian 配置）。
+
+为了避免在错误的文件夹里建笔记，请确认：
+你是否已经完成了 README 中的前 3 步？
+(1) `git clone` 到了目标文件夹
+(2) 用 Obsidian 软件【打开过】该文件夹
+(3) 将 WorkBuddy 的工作空间切换到了该文件夹
+
+A: 已确认，当前路径就是我的笔记库，继续初始化（AI 帮你补全配置）
+B: 哎呀搞错了，我先去重新打开正确的文件夹（选这个退出当前 setup）
+```
+
+- 若选 A，则自动以当前工作空间路径作为 Vault 路径，进入 Phase 3。
+- 若选 B，结束 setup，等待用户重新打开工作空间。
 
 ---
 
@@ -120,7 +125,7 @@ B: 未安装，请帮我下载
 # emoji 文件夹需要 UTF-8 locale 支持（cron/自动化场景尤其重要）
 export LC_ALL=en_US.UTF-8
 
-VAULT="<用户确认的 Vault 路径>"
+VAULT="." # 当前工作空间即为 Vault
 mkdir -p "$VAULT/📅每日笔记"
 mkdir -p "$VAULT/📚主题笔记"
 mkdir -p "$VAULT/📆每周笔记"
@@ -232,7 +237,7 @@ fi
 - `templates/*` → `"<vault>/obsidian-wiki-notes skill配置/templates/"`
 - `references/*` → `"<vault>/obsidian-wiki-notes skill配置/references/"`
 
-> 如果是接入已有库（Phase 2 B 路径），且库中已有该目录，跳过覆盖并提示用户。
+> 如果库中已有该目录，跳过覆盖以保护用户自定义内容，并提示用户。
 
 ### Step 3: 展示完整骨架结构
 

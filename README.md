@@ -8,19 +8,37 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 5-Minute Setup Guide
 
+⚠️ **CRITICAL PREMISE**: For the AI to manage your notes, both **Obsidian** and your **AI IDE (like WorkBuddy)** must open the **exact same folder**.
+
+#### Step 1: Get the Template Repository
+Open your terminal and clone the template to your preferred directory (you can replace `My-AI-Vault` with your desired folder name):
 ```bash
-# 1. Clone the repo
-git clone https://github.com/michelllsm/obsidian-wiki-notes.git
-
-# 2. Tell your AI assistant
--setup
-
-# 3. Follow the guided setup (5 phases, ~5 min)
-# 4. Start taking notes!
-day
+# Go to Documents (or your preferred folder)
+cd ~/Documents 
+# Clone the template and name it My-AI-Vault
+git clone https://github.com/michelllsm/obsidian-wiki-notes.git My-AI-Vault
 ```
+*(You will now have a folder named `My-AI-Vault` containing the basic templates and AI rules)*
+
+#### Step 2: Activate Obsidian Config
+1. Launch Obsidian
+2. Select **"Open folder as vault"**
+3. Choose the `My-AI-Vault` folder you just cloned
+*(Crucial: Opening it in Obsidian automatically generates the necessary `.obsidian` hidden configuration)*
+
+#### Step 3: Connect the AI Workspace
+1. Launch WorkBuddy (or your preferred AI IDE)
+2. Click New Task / Open Workspace
+3. **Select the same** `My-AI-Vault` folder
+*(Now, the AI is successfully inside your vault!)*
+
+#### Step 4: One-Click Initialization
+In the WorkBuddy chat, simply send this command to the AI:
+`-setup`
+
+The AI will automatically check your environment, supplement any missing files, and guide you to start your smart note-taking journey!
 
 ---
 

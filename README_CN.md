@@ -8,19 +8,37 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 5分钟开箱指南
 
+⚠️ **关键前提**：为了让 AI 能够接管你的笔记库，必须确保 **Obsidian** 和 **AI (如 WorkBuddy)** 打开的是**完全相同的文件夹**。
+
+#### Step 1: 获取模板仓库
+打开终端，将模板克隆到你的常用目录（你可以将 `My-AI-Vault` 替换为你喜欢的文件夹名字）：
 ```bash
-# 1. 克隆仓库
-git clone https://github.com/michelllsm/obsidian-wiki-notes.git
-
-# 2. 告诉 AI 助手
--setup
-
-# 3. 跟着引导完成（5步，约5分钟）
-# 4. 开始记笔记！
-day
+# 进入文稿目录 (或你习惯的任意目录)
+cd ~/Documents 
+# 克隆模板并命名为 My-AI-Vault
+git clone https://github.com/michelllsm/obsidian-wiki-notes.git My-AI-Vault
 ```
+*(操作后，你的电脑里会多出一个叫 `My-AI-Vault` 的文件夹，里面已经包含了基础的模板和 AI 规则)*
+
+#### Step 2: 激活 Obsidian 配置
+1. 启动 Obsidian 软件
+2. 选择 **「打开已有仓库」 (Open folder as vault)**
+3. 选中刚才克隆生成的 `My-AI-Vault` 文件夹
+*(这一步很重要：只要用 Obsidian 打开过一次，它就会在里面自动生成必要的 `.obsidian` 隐藏配置)*
+
+#### Step 3: 接入 AI 工作空间
+1. 启动 WorkBuddy (或你使用的其他 AI IDE)
+2. 点击新建任务/打开工作空间
+3. **同样选中** `My-AI-Vault` 这个文件夹
+*(现在，AI 已经成功潜入你的笔记库了！)*
+
+#### Step 4: 一键初始化
+在 WorkBuddy 的对话框中，直接向 AI 发送指令：
+`-setup`
+
+AI 会自动为你进行环境检查、补充缺失文件，并带你开启智能笔记之旅！
 
 ---
 
